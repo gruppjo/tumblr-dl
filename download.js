@@ -1,6 +1,8 @@
 const download = require('download');
+const fs = require('fs');
 const allPhotos = require('./data-files/allPhotos.json');
 const allVideos = require('./data-files/allVideos.json');
+const allTexts = require('./data-files/allTexts.json');
 
 const OFFSET = 0;
 const CONCURRENT_ITEMS = 50;
@@ -34,11 +36,21 @@ const downloadAll = async (allItems) => {
       console.log(`downloading ${item.filename}`);
     }
 
-    await downloadPromisesSet(promises);
-
     index += concurrencyCount; // add one more than the last downloaded index
+
+    await downloadPromisesSet(promises, allItems);
   }
 };
 
-// downloadAll(allPhotos);
+downloadAll(allPhotos);
 downloadAll(allVideos);
+
+const allTextsFiles = [];
+allTexts.forEach((text) => {
+  allTextsFiles.push(...text.files);
+  console.log(`writing ${text.name}.html`);
+  fs.writeFileSync(`./tumblr-files/${text.name}.html`, text.body);
+});
+console.log(allTextsFiles.length);
+downloadAll(allTextsFiles);
+
