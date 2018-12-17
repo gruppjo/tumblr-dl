@@ -1,4 +1,4 @@
-const posts = require('./data-files/likedPosts1.json');
+const posts = require('./data-files/likedPosts.json');
 const fs = require('fs');
 
 console.log(posts.length, 'total');
