@@ -73,7 +73,7 @@ handleRequest()
   console.log('done');
 });
 
-
+// initial implementation
 // client.userLikes((response) => {
 //   response.liked_posts.length;
 //   response.liked_posts.forEach(post => {
