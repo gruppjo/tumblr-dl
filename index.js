@@ -1,4 +1,6 @@
 const tumblr = require('tumblr.js');
+// tumblr.js
+//  - had some issues with the callback API and adding options for userLikes
 const http = require('http');
 const https = require('https');
 const fs = require('fs');

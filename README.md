@@ -26,3 +26,13 @@ Quick guide:
   - this creates `data-files/allPhotos.json`, `data-files/allTexts.json`, `data-files/allVideos.json`
 - run `node download.js`
   - this downloads all the content to your harddrive in a `tumblr-files` folder
+
+
+### Todos
+- Feature
+  - DL followed blogs and other meta-data
+- Improvements
+  - name the download folders better
+  - Improve documentation so it's clearer why we need to do certain things
+    - Had issues placing the API call directly, wouldn't give me certain videos and content via Postman (with `/user/likes`)
+    - `tumblr.js` callback API didn't work with passing in options
