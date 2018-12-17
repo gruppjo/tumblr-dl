@@ -1,5 +1,4 @@
 const posts = require('./data-files/likedPosts1.json');
-const download = require('download');
 const fs = require('fs');
 
 console.log(posts.length, 'total');
