@@ -1,6 +1,6 @@
 node_modules
 secrets.json
-data-files/**
+data-files*/**
 !data-files/.gitkeep
-tumblr-files/**
+tumblr-files*/**
 !tumblr-files/.gitkeep
