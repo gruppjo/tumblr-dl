@@ -5,10 +5,10 @@ const allVideos = require('./data-files/allVideos.json');
 const OFFSET = 0;
 const CONCURRENT_ITEMS = 50;
 
-const downloadPromisesSet = async (promises) => {
+const downloadPromisesSet = async (promises, allItems) => {
   return Promise.all(promises)
   .then(() => {
-    console.log(`downloaded set - ${index} of ${allPhotos.length}`);
+    console.log(`downloaded set - ${index} of ${allItems.length}`);
   })
 };
 
