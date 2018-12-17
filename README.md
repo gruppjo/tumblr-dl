@@ -7,7 +7,7 @@ Quick guide:
 - `npm install`
 - visit https://www.tumblr.com/oauth/apps
   - register an application
-  - authentication application
+  - authenticate application
   - click little explore Explore API link
 - you're navigated to https://api.tumblr.com/console/calls/user/info
   - click 'Show keys' on top right
